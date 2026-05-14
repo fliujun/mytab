@@ -63,11 +63,11 @@
   <p class="subtitle">Last updated: May 14, 2025</p>
 
   <div class="highlight">
-    <p><strong>Summary:</strong> MyTab does not collect, transmit, or share any personal data. All your data stays on your device and in your Google account's sync storage.</p>
+    <p><strong>Summary:</strong> MyTab does not collect, transmit, or share any personal data. All your data stays locally on your device.</p>
   </div>
 
   <h2>What is MyTab?</h2>
-  <p>MyTab is a Chrome extension that replaces your new tab page with a customizable dashboard featuring bookmarks, Chrome bookmark folder sync, animated backgrounds, and a search bar.</p>
+  <p>MyTab is a Chrome extension that replaces your new tab page with a customizable dashboard featuring bookmarks, Chrome bookmark folder sync, 30 animated backgrounds, and a search bar.</p>
 
   <h2>Data Collection</h2>
   <p>MyTab does <strong>NOT</strong> collect any personal information. Specifically:</p>
@@ -78,20 +78,20 @@
      • No third-party SDKs are included.</p>
 
   <h2>Data Storage</h2>
-  <p>Your bookmarks, groups, and settings are stored using Chrome's built-in storage APIs:</p>
-  <p><strong>chrome.storage.sync</strong> — Stores your bookmark structure (names, URLs, group order) and settings. This data automatically syncs across your Chrome browsers through your Google account. The sync is handled entirely by Google's infrastructure.</p>
-  <p><strong>chrome.storage.local</strong> — Stores custom cover images and fetched favicon icons locally on your device. This data does not leave your machine.</p>
+  <p>Your bookmarks, groups, and settings are stored using Chrome's built-in storage API:</p>
+  <p><strong>chrome.storage.local</strong> — Stores all your bookmarks, settings, custom cover images, and fetched favicon icons locally on your device. No data is synced to any cloud service or leaves your machine.</p>
 
   <h2>Network Requests</h2>
-  <p>MyTab makes network requests <strong>only</strong> to fetch website favicon (icon) images from these two services:</p>
+  <p>MyTab makes network requests <strong>only</strong> as a fallback to fetch website favicon (icon) images when Chrome's local cache does not have them. The following services may be used:</p>
   <p>• Google Favicon Service: <code>https://www.google.com/s2/favicons</code><br>
      • Favicon.im: <code>https://favicon.im</code></p>
   <p>These requests send only the domain name (e.g., "github.com") to retrieve the website's icon. No other information is transmitted.</p>
 
   <h2>Permissions Explained</h2>
-  <p><strong>storage</strong> — Required to save and sync your bookmarks and settings across devices.</p>
+  <p><strong>storage</strong> — Required to save your bookmarks and settings locally on your device.</p>
   <p><strong>bookmarks</strong> — Required for the Chrome bookmark folder binding and import features. MyTab reads your bookmark tree to let you bind folders and listens for bookmark changes to keep bound groups in sync. MyTab does NOT modify, delete, or create any bookmarks in your Chrome browser.</p>
-  <p><strong>host_permissions (google.com/s2/favicons, favicon.im)</strong> — Required to fetch website icons for display in your bookmark cards. These are the only external domains MyTab communicates with.</p>
+  <p><strong>favicon</strong> — Required to access Chrome's built-in favicon cache to display website icons on bookmark cards. This only reads locally cached icons already stored by Chrome and does not make any additional network requests.</p>
+  <p><strong>host_permissions (google.com/s2/favicons, gstatic.com, favicon.im)</strong> — Used as a fallback to fetch website icons when Chrome's local favicon cache does not have them. Only the domain name is sent; no other data is transmitted.</p>
 
   <h2>Data Sharing</h2>
   <p>We do not sell, trade, or transfer any data to third parties. We do not have access to your data at all.</p>
