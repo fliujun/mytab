@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>浮光 (FuGuang) - Privacy Policy</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      color: #333;
+      line-height: 1.8;
+      background: #fafafa;
+    }
+    h1 { font-size: 1.8em; margin-bottom: 0.2em; }
+    h2 { font-size: 1.2em; margin-top: 2em; color: #222; }
+    p { margin: 0.8em 0; }
+    .updated { color: #888; font-size: 0.9em; }
+    .summary { background: #e8f5e9; padding: 12px 16px; border-radius: 8px; margin: 1em 0; }
+    strong { color: #111; }
+    code { background: #eee; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+    footer { margin-top: 3em; padding-top: 1.5em; border-top: 1px solid #ddd; color: #888; font-size: 0.85em; }
+  </style>
+</head>
+<body>
+  <h1>浮光 (FuGuang) Privacy Policy</h1>
+  <p class="updated">Last updated: June 1, 2026</p>
+  <p class="summary"><strong>Summary:</strong> 浮光 does not collect, transmit, or share any personal data. All your data stays locally on your device. 浮光 only communicates with local native helper apps on your machine when you explicitly enable Apple Reminders sync. The only network request is fetching a plain-text announcement file from our own domain (d.vkr.me) to display update notices — no personal data is sent.</p>
+
+  <h2>What is 浮光?</h2>
+  <p>浮光 (FuGuang) is a Chrome extension that replaces your new tab page with a customizable dashboard featuring bookmarks, Chrome bookmark folder sync, a calculator, a translator, daily English sentences, Chinese poetry, Chinese idioms, 30+ animated backgrounds, a todo list, and optional Apple Reminders two-way sync (macOS only).</p>
+
+  <h2>Data Collection</h2>
+  <p>浮光 does <strong>NOT</strong> collect any personal information. Specifically:</p>
+  <p>• No analytics, telemetry, or tracking of any kind.<br>
+     • No browsing history, cookies, or personal data is accessed.<br>
+     • No data is ever sent to any external server (we don't have servers).<br>
+     • No advertisements are displayed.<br>
+     • No third-party SDKs are included.</p>
+
+  <h2>Data Storage</h2>
+  <p>Your bookmarks, groups, settings, favorites, and widget data are stored using Chrome's built-in storage API:</p>
+  <p><strong>chrome.storage.local</strong> — Stores all your bookmarks, settings, favorites (poetry, idioms, daily English), todo items, and custom cover images locally on your device. No data is synced to any cloud service or leaves your machine.</p>
+
+  <h2>Network Requests</h2>
+  <p>浮光 makes one optional network request: fetching a plain-text announcement file from <code>https://d.vkr.me/messages.txt</code> (our own domain) once per day to display update notices and tips in the date carousel. This request sends no personal data, no cookies, and no identifiers. The fetched content is cached locally for the day. All other functionality operates entirely offline using local data and browser APIs. The optional Apple Reminders sync feature communicates exclusively with a local native helper app on your machine via Chrome Native Messaging — no data leaves your device.</p>
+
+  <h2>Permissions Explained</h2>
+  <p><strong>storage</strong> — Required to save your bookmarks, settings, favorites, and widget data locally on your device.</p>
+  <p><strong>bookmarks</strong> — Required for the Chrome bookmark folder sync and import features. 浮光 reads your bookmark tree to let you sync folders and listens for bookmark changes to keep synced groups up to date. 浮光 does NOT modify, delete, or create any bookmarks in your Chrome browser.</p>
+  <p><strong>tabs</strong> — Required to detect and close duplicate new tab pages, ensuring only one instance of 浮光 is open at a time for a cleaner browsing experience.</p>
+  <p><strong>favicon</strong> — Required to display website favicons for your bookmarks.</p>
+  <p><strong>nativeMessaging</strong> — Required for the optional Apple Reminders sync feature (macOS only). This permission allows 浮光 to communicate with a local native helper app installed on your machine to read and write Apple Reminders. No data is sent to any external server.</p>
+  <p><strong>host_permissions (https://d.vkr.me/*)</strong> — Required to fetch a plain-text announcement file from our own domain once per day. This file contains update notices and tips displayed in the date area. No personal data is transmitted.</p>
+
+  <h2>Data Sharing</h2>
+  <p>We do not sell, trade, or transfer any data to third parties. We do not have access to your data at all.</p>
+
+  <h2>Children's Privacy</h2>
+  <p>浮光 does not knowingly collect any information from anyone, including children under the age of 13.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>If we update this privacy policy, we will revise the "Last updated" date at the top of this page.</p>
+
+  <h2>Contact</h2>
+  <p>If you have any questions about this privacy policy, please contact us through the Chrome Web Store developer page or open an issue on our GitHub repository.</p>
+
+  <footer>© 2025 浮光 (FuGuang). This extension is open source and free to use.</footer>
+</body>
+</html>
